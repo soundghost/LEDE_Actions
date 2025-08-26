@@ -20,8 +20,8 @@ sed -i 's/192.168.1.1/192.168.9.1/g' package/base-files/files/bin/config_generat
 git clone https://github.com/zzsj0928/luci-app-pushbot package/luci-app-pushbot
 git clone https://github.com/sbwml/luci-app-airconnect.git  package/luci-app-airconnect
 git clone https://github.com/EasyTier/luci-app-easytier.git package/luci-app-easytier
-echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-#echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+# echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
+# echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 #添加360T7 108M 512M-Ram USB支持
 echo '&xhci {' >> target/linux/mediatek/dts/mt7981b-qihoo-360t7.dts
