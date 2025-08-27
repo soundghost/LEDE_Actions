@@ -10,6 +10,6 @@ iOS 在不添加额外硬件的情况下，通过软件即可让 Spotify 和 Pan
 
 路由器在集成了 DLNA 功能后，似乎只有 Windows 端可以通过本地音乐播放器（foobar2000、WMP、VLC等）实现推流播放本地音乐的功能，在线推流的支持都差。
 
-#### 上游 OpenWrt 代码 Fork 自 [lede]!(https://github.com/coolsnowwolf/lede)
-#### Actions 代码 Frok 自 [P3TERX] (https://github.com/P3TERX/Actions-OpenWrt)
+#### 上游 OpenWrt 代码 Fork 自 [lede](https://github.com/coolsnowwolf/lede)
+#### Actions 代码 Frok 自 [P3TERX](https://github.com/P3TERX/Actions-OpenWrt)
 
