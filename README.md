@@ -1,39 +1,15 @@
-**English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
+### 本项目专注于 OpenWrt USB WiFi 音箱的系统构建。
 
-# Actions-OpenWrt
+#### 一般情况下，本项目固件自动包含以下功能：
 
-[![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE)
-![GitHub Stars](https://img.shields.io/github/stars/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Stars&logo=github)
-![GitHub Forks](https://img.shields.io/github/forks/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Forks&logo=github)
+##### Airplay | DLNA（Gmediarender）| Aria2 | DDNS-GO | EasyTier | Pianod（Pandora）
 
-A template for building OpenWrt with GitHub Actions
+Android 下的 App 对于 DLNA 音箱支持其实非常差，远远不如 iOS 系统的 AirPlay 成熟度高。
 
-## Usage
+iOS 在不添加额外硬件的情况下，通过软件即可让 Spotify 和 Pandora 实现 WIFI 音箱的功能，但在 Android 上，这两个目前都很难实现。
 
-- Click the [Use this template](https://github.com/P3TERX/Actions-OpenWrt/generate) button to create a new repository.
-- Generate `.config` files using [Lean's OpenWrt](https://github.com/coolsnowwolf/lede) source code. ( You can change it through environment variables in the workflow file. )
-- Push `.config` file to the GitHub repository.
-- Select `Build OpenWrt` on the Actions page.
-- Click the `Run workflow` button.
-- When the build is complete, click the `Artifacts` button in the upper right corner of the Actions page to download the binaries.
+路由器在集成了 DLNA 功能后，似乎只有 Windows 端可以通过本地音乐播放器（foobar2000、WMP、VLC等）实现推流播放本地音乐的功能，在线推流的支持都差。
 
-## Tips
+#### 上游 OpenWrt 代码 Fork 自 [lede]!(https://github.com/coolsnowwolf/lede)
+#### Actions 代码 Frok 自 [P3TERX] (https://github.com/P3TERX/Actions-OpenWrt)
 
-- It may take a long time to create a `.config` file and build the OpenWrt firmware. Thus, before create repository to build your own firmware, you may check out if others have already built it which meet your needs by simply [search `Actions-Openwrt` in GitHub](https://github.com/search?q=Actions-openwrt).
-- Add some meta info of your built firmware (such as firmware architecture and installed packages) to your repository introduction, this will save others' time.
-
-## Credits
-
-- [Microsoft Azure](https://azure.microsoft.com)
-- [GitHub Actions](https://github.com/features/actions)
-- [OpenWrt](https://github.com/openwrt/openwrt)
-- [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)
-- [Mikubill/transfer](https://github.com/Mikubill/transfer)
-- [softprops/action-gh-release](https://github.com/softprops/action-gh-release)
-- [Mattraks/delete-workflow-runs](https://github.com/Mattraks/delete-workflow-runs)
-- [dev-drprasad/delete-older-releases](https://github.com/dev-drprasad/delete-older-releases)
-- [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch)
-
-## License
-
-[MIT](https://github.com/P3TERX/Actions-OpenWrt/blob/main/LICENSE) © [**P3TERX**](https://p3terx.com)
