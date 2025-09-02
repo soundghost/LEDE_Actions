@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: Building N1
+name: Building K3
 
 on:
   repository_dispatch:
