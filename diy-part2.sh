@@ -18,3 +18,6 @@
 
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
+
+##-----------------Del duplicate packages------------------
+rm -rf feeds/packages/net/open-app-filter
