@@ -13,8 +13,8 @@
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
-#更改默认地址为192.168.9.1
-sed -i 's/192.168.1.1/192.168.9.1/g' package/base-files/files/bin/config_generate
+# 更改默认地址为192.168.9.1
+# sed -i 's/192.168.1.1/192.168.9.1/g' package/base-files/files/bin/config_generate
 
 # Add a feed source
 git clone https://github.com/zzsj0928/luci-app-pushbot package/luci-app-pushbot
