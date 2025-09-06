@@ -91,7 +91,6 @@ jobs:
 
     - name: Load custom configuration
       run: |
-        [ -e files ] && mv files openwrt/files
         cat configs/K3.config > openwrt/.config
         chmod +x $DIY_P2_SH
         cd openwrt
