@@ -83,9 +83,9 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P1_SH
         pwd
         ls -lh
-        sleep 10
-        cd packages
-        ln -s ../../snapos/openwrt ./snapcast
+        cd package
+        ln -s ../snapos/openwrt ./snapcast
+        cd ..
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
