@@ -81,7 +81,7 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
-        cd openwrt/packages
+        cd packages
         ln -s ../../snapos/openwrt ./snapcast
 
     - name: Update feeds
