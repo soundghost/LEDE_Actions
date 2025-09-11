@@ -18,6 +18,7 @@
 
 # Add a feed source
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
+git clone https://github.com/badaix/snapos.git
 git clone https://github.com/zzsj0928/luci-app-pushbot package/luci-app-pushbot
 git clone https://github.com/sbwml/luci-app-airconnect.git  package/luci-app-airconnect
 git clone https://github.com/EasyTier/luci-app-easytier.git package/luci-app-easytier
