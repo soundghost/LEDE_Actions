@@ -16,12 +16,16 @@
 # 更改默认地址为192.168.9.1
 # sed -i 's/192.168.1.1/192.168.9.1/g' package/base-files/files/bin/config_generate
 
+#删除低版本v2ray-geodata和mosdns
+rm -rf feeds/packages/net/v2ray-geodata
+rm -rf feeds/packages/net/mosdns
+
 # Add a feed source
 git clone https://github.com/zzsj0928/luci-app-pushbot package/luci-app-pushbot
 git clone https://github.com/sbwml/luci-app-airconnect.git  package/luci-app-airconnect
 git clone https://github.com/EasyTier/luci-app-easytier.git package/luci-app-easytier
-git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
+git clone https://github.com/ashdkv/ympd-openwrt.git package/ympd
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 # echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
