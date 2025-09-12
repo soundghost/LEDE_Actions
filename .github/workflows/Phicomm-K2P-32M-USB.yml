@@ -165,16 +165,11 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y.%m.%d-MT7621-K2P-32MB-USB & GHL-r001-WIFI-SPEAKER")" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y.%m.%d")-MT7621-K2P-32MB-USB & GHL-r001-WIFI-SPEAKER" >> $GITHUB_OUTPUT
         touch release.txt
         [ ${UPLOAD_GOFILE} = true && ${{ steps.gofile.outputs.url }} ] && echo "🔗 [GoFile](${{ steps.gofile.outputs.url }})" >> release.txt
-        echo "status=success" >> $GITHUB_OUTPUT
-
-        # 添加编译信息
-        echo "" >> release.txt
-        echo "## 📋 编译信息" >> release.txt
-        echo "- 🕐 编译完成时间: $(date +"%Y.%m.%d")" >> release.txt
         echo "- 📦 包含以下音乐类软件：airconnect | airplay2 | upmpdcli | ympd | pianod | snapcast ( client )" >> release.txt
+        echo "status=success" >> $GITHUB_OUTPUT
 
     - name: Upload firmware to release
       uses: softprops/action-gh-release@master
