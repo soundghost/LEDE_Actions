@@ -173,7 +173,7 @@ jobs:
         # 添加编译信息
         echo "" >> release.txt
         echo "## 📋 编译信息" >> release.txt
-        echo "- 🕐 编译完成时间: $compile_time" >> release.txt
+        echo "- 🕐 编译完成时间: $(date +"%Y.%m.%d")" >> release.txt
         echo "- 📦 包含以下音乐类软件：airconnect | airplay2 | upmpdcli | ympd | pianod | snapcast ( client )" >> release.txt
 
     - name: Upload firmware to release
