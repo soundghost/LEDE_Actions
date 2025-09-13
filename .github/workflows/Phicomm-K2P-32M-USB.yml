@@ -114,6 +114,17 @@ jobs:
             echo "Invalid IP address, use default."
         fi
 
+    - name: configuration snapcast
+      run: |
+        cd openwrt
+        echo "建立snapcast软链接"
+        if ln -s snapos/openwrt package/snapcast; then
+          echo "建立snapcast软链接成功"
+        else
+          echo "建立snapcast软链接失败，流程将终止"
+          exit 1
+        fi
+
     - name: Download package
       id: package
       run: |
