@@ -19,7 +19,7 @@ on:
       LAN_IP:
         description: 'Set LAN IP Address'
         required: true
-        default: '192.168.1.1'
+        default: '192.168.12.1'
         
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -81,14 +81,10 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
-        cd openwrt/packages
-        ln -s ../../snapos/openwrt ./snapcast
+        ln -s snapos/openwrt package/snapcast
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
-
-    - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |
@@ -96,6 +92,9 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
+
+    - name: Install feeds
+      run: cd openwrt && ./scripts/feeds install -a
 
     - name: 设置LAN IP地址（路由器登录地址）
       run: |
