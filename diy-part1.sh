@@ -22,7 +22,7 @@ git clone https://github.com/badaix/snapos.git
 git clone https://github.com/zzsj0928/luci-app-pushbot package/luci-app-pushbot
 git clone https://github.com/sbwml/luci-app-airconnect.git  package/luci-app-airconnect
 git clone https://github.com/EasyTier/luci-app-easytier.git package/luci-app-easytier
-git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
+#git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone https://github.com/ashdkv/ympd-openwrt.git package/ympd
 # echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
