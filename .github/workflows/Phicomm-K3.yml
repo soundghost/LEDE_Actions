@@ -174,12 +174,12 @@ jobs:
         #fi
 
         # 更新 xray-core Makefile
-        echo "🔄 更新 xray-core Makefile..."
-        if curl -sSL https://raw.githubusercontent.com/immortalwrt/packages/refs/heads/master/net/xray-core/Makefile -o package/feeds/packages/xray-core/Makefile; then
-          echo "✅ xray-core Makefile 更新成功"
-        else
-          echo "⚠️ xray-core Makefile 更新失败，继续使用原版本"
-        fi
+        #echo "🔄 更新 xray-core Makefile..."
+        #if curl -sSL https://raw.githubusercontent.com/immortalwrt/packages/refs/heads/master/net/xray-core/Makefile -o package/feeds/packages/xray-core/Makefile; then
+        #  echo "✅ xray-core Makefile 更新成功"
+        #else
+        #  echo "⚠️ xray-core Makefile 更新失败，继续使用原版本"
+        #fi
 
         # 更新 upmpdcli Makefile
         echo "🔄 更新 upmpdcli Makefile..."
