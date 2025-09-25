@@ -24,7 +24,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  ENV_SH: scripts/imm-environment.sh
+  ENV_SH: scripts/environment.sh
   DIY_SH1: scripts/diy-part1.sh
   DIY_SH2: scripts/diy-part2.sh
   UPLOAD_BIN_DIR: false
