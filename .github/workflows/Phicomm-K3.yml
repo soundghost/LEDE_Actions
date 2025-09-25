@@ -90,7 +90,9 @@ jobs:
         # 更新软件包列表
         sudo -E apt-get -qq update -y
         # 升级系统（可选，根据需要启用）
-        # sudo -E apt-get -qq full-upgrade -y
+        sudo -E apt-get -qq full-upgrade -y
+        # 安装依赖包
+        echo "安装依赖包"
         chmod +x $ENV_SH && $ENV_SH
         sudo timedatectl set-timezone "$TZ"
         # 创建工作目录
